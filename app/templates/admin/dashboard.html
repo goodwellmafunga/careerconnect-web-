@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Admin Dashboard</h2>
+    <ul>
+        <li><a href="{{ url_for('admin.manage_students') }}">Manage Students</a></li>
+        <li><a href="{{ url_for('admin.manage_courses') }}">Manage Courses</a></li>
+        <li><a href="{{ url_for('admin.upload_materials') }}">Upload Materials</a></li>
+    </ul>
+</div>
+{% endblock %}

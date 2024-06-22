@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>News</h2>
+<ul>
+    {% for item in news %}
+    <li>{{ item.title }} - {{ item.date_posted.strftime('%Y-%m-%d') }}</li>
+    <p>{{ item.content }}</p>
+    {% endfor %}
+</ul>
+{% endblock %}

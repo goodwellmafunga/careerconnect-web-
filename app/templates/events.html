@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Events</h2>
+<ul>
+    {% for event in events %}
+    <li>{{ event.title }} - {{ event.date.strftime('%Y-%m-%d') }}</li>
+    <p>{{ event.description }}</p>
+    {% endfor %}
+</ul>
+{% endblock %}

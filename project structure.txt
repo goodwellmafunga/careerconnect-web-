@@ -1,0 +1,45 @@
+careerconnect/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── forms.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── main_routes.py  # News, Courses, Events
+│   │   ├── auth_routes.py  # Registration, Login
+│   │   ├── admin_routes.py # Admin functionalities
+│   │   └── classroom_routes.py # Online classrooms
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── news.html
+│   │   ├── courses.html
+│   │   ├── events.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   ├── admin/
+│   │   │   ├── dashboard.html
+│   │   │   ├── manage_students.html
+│   │   │   ├── manage_courses.html
+│   │   │   └── upload_materials.html
+│   │   └── classrooms.html
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   └── helpers.py
+│   └── config.py
+│
+├── migrations/
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_routes.py
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+└── run.py

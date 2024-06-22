@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #90a6aa; /* Set the background color */
+    color: #FFFFFF; /* Ensure text is readable */
+    padding-top: 70px; /* Adjust padding to avoid content overlap with fixed navbar */
+}
+
+.navbar {
+    background-color: rgba(128, 0, 0, 0.8); /* Maroon with some transparency */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is on top */
+}
+
+.footer {
+    background-color: rgba(128, 0, 0, 0.8); /* Maroon with some transparency */
+}
+
+.nav-link {
+    color: #FFFF00 !important; /* Yellow */
+}
+
+.nav-link-title {
+    color: #FFFF00 !important; /* Yellow */
+}
+
+.nav-link:hover {
+    color: #008000 !important; /* Green */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #90a6aa; /* Match the background color */
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-responsive:hover {
+    transform: scale(1.05);
+}
+
+.content-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #800000; /* Maroon */
+}
+
+p {
+    color: #000;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px #000000; /* Add shadow for readability */
+}
