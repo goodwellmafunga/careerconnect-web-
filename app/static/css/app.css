@@ -76,6 +76,25 @@ p {
     color: #000;
 }
 
-.text-shadow {
-    text-shadow: 2px 2px 4px #000000; /* Add shadow for readability */
+/* Card styling for courses page */
+.card {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #800000; /* Maroon */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1em;
 }

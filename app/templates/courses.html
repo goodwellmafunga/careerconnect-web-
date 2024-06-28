@@ -1,10 +1,57 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>Courses</h2>
-<ul>
-    {% for course in courses %}
-    <li>{{ course.title }}</li>
-    <p>{{ course.description }}</p>
-    {% endfor %}
-</ul>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - CAREERCONNECT</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-maroon fixed-top">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            <span class="nav-link-title">CAREERCONNECT</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.news') }}">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.courses') }}">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.events') }}">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center">Our Courses</h1>
+        <div class="row mt-4">
+            {% for course in courses %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ course.title }}</h5>
+                        <p class="card-text">{{ course.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer class="footer bg-maroon text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 CAREERCONNECT. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@careerconnect.com" class="text-white">info@careerconnect.com</a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
