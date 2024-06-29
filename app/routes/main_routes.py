@@ -36,8 +36,7 @@ def courses():
         {"title": "Graphic Designing", "description": "Master the tools and techniques of graphic design."},
         {"title": "Business Administration", "description": "Learn the principles of managing and running businesses."},
         {"title": "Journalism", "description": "Develop skills in reporting, writing, and media production."},
-        {"title": "Web Development", "description": "Learn to build and maintain websites."},
-        {"title": "Data Analytics", "description": "Understand data analysis techniques and tools."},
+        {"title": "Web Development", "description": "Learn to build and maintain websites."}
     ]
     return render_template('courses.html', courses=courses)
 

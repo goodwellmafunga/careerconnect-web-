@@ -1,23 +1,85 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="text-center">
-    <h2>About CAREERCONNECT</h2>
-    <p>CAREERCONNECT is a premier institution dedicated to providing top-notch education and career development opportunities. Located at Number 1 Nkwame, Harare, we pride ourselves on our commitment to excellence and innovation in education.</p>
-    <h3>Our Mission</h3>
-    <p>To empower individuals through education and training, equipping them with the skills and knowledge needed to succeed in their careers.</p>
-    
-    <h3>Our Vision</h3>
-    <p>To be a leading institution in providing innovative and quality education that transforms lives and communities.</p>
-    
-    <h3>Our History</h3>
-    <p>Established in 1995, CAREERCONNECT has grown from a small community college to a comprehensive institution offering a wide range of courses and programs. Over the years, we have expanded our facilities and faculty to better serve our students and community.</p>
-    
-    <h3>Our Values</h3>
-    <ul>
-        <li><strong>Excellence:</strong> We strive for excellence in everything we do, from teaching to student services.</li>
-        <li><strong>Innovation:</strong> We embrace innovation and encourage creative thinking and problem-solving.</li>
-        <li><strong>Community:</strong> We are committed to serving our community and making a positive impact.</li>
-        <li><strong>Integrity:</strong> We uphold the highest standards of integrity and ethics in all our actions.</li>
-    </ul>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CAREERCONNECT</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: none; /* Remove the background image */
+            background-color: #90a6aa; /* Set a background color instead */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-maroon fixed-top">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            <span class="nav-link-title">CAREERCONNECT</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.news') }}">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.courses') }}">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.events') }}">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center">About CAREERCONNECT</h1>
+        <p class="text-center">
+            CAREERCONNECT is a premier institution dedicated to providing top-notch education and career development opportunities. Located at Number 1 Nkwame, Harare, we are committed to empowering individuals through education and training. Our goal is to equip students with the skills and knowledge needed to succeed in their careers, fostering an environment of innovation and excellence. At CAREERCONNECT, we believe in the transformative power of education and strive to be a leading institution in providing innovative and quality education that transforms lives and communities.
+        </p>
+        <h2 class="text-center">Our Mission</h2>
+        <p class="text-center">
+            To empower individuals through education and training, equipping them with the skills and knowledge needed to succeed in their careers.
+        </p>
+        <h2 class="text-center">Our Vision</h2>
+        <p class="text-center">
+            To be a leading institution in providing innovative and quality education that transforms lives and communities.
+        </p>
+        <h2 class="text-center">Our Values</h2>
+        <div class="values-container">
+            <ul class="values-list list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Respect:</strong> We respect and value diversity and inclusivity.
+                </li>
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Excellence:</strong> We strive for excellence in education and training.
+                </li>
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Integrity:</strong> We uphold the highest standards of integrity in all our actions.
+                </li>
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Innovation:</strong> We embrace innovative methods to enhance learning and development.
+                </li>
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Commitment:</strong> We are committed to the personal and professional growth of our students.
+                </li>
+                <li class="list-group-item bg-transparent text-center">
+                    <strong>Community:</strong> We foster a strong sense of community and collaboration among our students and staff.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer bg-maroon text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 CAREERCONNECT. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@careerconnect.com" class="text-white">info@careerconnect.com</a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -77,14 +77,23 @@ p {
 }
 
 /* Card styling for courses page */
-.card {
-    background-color: #fff;
+.container .card {
+    background-color: #90a6aa !important; /* Apply same background color */
     color: #000;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
 }
 
+.container .card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.container {
+margin-top: 20px; /* Adjust margin-top to minimize the gap */
+}
 .card-body {
     padding: 20px;
 }
@@ -97,4 +106,61 @@ p {
 
 .card-text {
     font-size: 1em;
+}
+
+/* Scrolling text effect */
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    font-size: 4em;
+    color: #800000; /* Maroon */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px; /* Adjust margin-top to minimize the gap */
+}
+
+
+
+.container.mt-5.pt-5 {
+    margin-top: 13px !important; /* Reduce the margin-top */
+    padding-top: 13px !important; /* Reduce the padding-top */
+}
+
+
+.scrolling-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Scrolling effect for values */
+.values-container {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.values-list {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-values 20s linear infinite;
+}
+
+@keyframes scroll-values {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
