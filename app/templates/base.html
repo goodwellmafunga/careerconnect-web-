@@ -20,23 +20,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.news') }}">News</a></li>
+                <!--  <li class="nav-item"><a class="nav-link" href="{{ url_for('main.news') }}">News</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('main.courses') }}">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.events') }}">Events</a></li>
+               <!--   <li class="nav-item"><a class="nav-link" href="{{ url_for('main.events') }}">Events</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('main.about') }}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>-->
             </ul>
         </div>
     </nav>
-    <div class="container-fluid mt-5 d-flex flex-wrap">
-        <div class="image-container">
-            <img src="{{ url_for('static', filename='img/campus.png') }}" alt="Campus Image" class="img-responsive">
+
+    <!-- Main content area -->
+    <div class="container-fluid mt-5">
+        <!-- Optional Image Section (conditional rendering) -->
+        {% if include_image %}
+        <div class="image-container mb-4">
+            <img src="{{ url_for('static', filename='img/campus.png') }}" alt="Campus Image" class="img-fluid">
         </div>
+        {% endif %}
+        
+        <!-- Content Block Section -->
         <div class="content-container text-shadow">
             {% block content %}{% endblock %}
         </div>
     </div>
+
     <footer class="footer bg-maroon text-white text-center py-3 mt-5">
         <div class="container">
             <p>&copy; 2024 CAREERCONNECT. All rights reserved.</p>
